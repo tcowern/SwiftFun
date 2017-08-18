@@ -11,23 +11,34 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var buttonCount = 0
+    
     
     @IBOutlet weak var myLabel: UILabel!
     
+    @IBOutlet weak var topTextField: UITextField!
+    
+    @IBOutlet weak var additionSwitch: UISwitch!
+
+    @IBOutlet weak var bottomTextField: UITextField!
+    
     @IBAction func buttonTapped(_ sender: Any) {
         
-        print(buttonCount)
+        let addition = additionSwitch.isOn
         
-        buttonCount += 1
-        
-        myLabel.text = "Count: \(buttonCount)"
-        
-        if buttonCount == 10 {
+        if addition {
             
-            view.backgroundColor = UIColor.red
+            let total = Double(topTextField.text!)! + Double(bottomTextField.text!)!
+            
+            myLabel.text = "Add Total: \(total)"
+            
+        } else {
+            
+            let total = Double(topTextField.text!)! - Double(bottomTextField.text!)!
+            
+            myLabel.text = "Subtract Total: \(total)"
             
         }
+        
         
     }
     

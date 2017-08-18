@@ -25,24 +25,54 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWy-tn-J5d">
-                                <rect key="frame" x="162" y="362" width="50" height="30"/>
-                                <state key="normal" title="Hit Me!"/>
+                                <rect key="frame" x="158" y="362" width="58" height="30"/>
+                                <state key="normal" title="Add Me!"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F2Y-UY-iy4"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p0N-HR-1cP">
+                                <rect key="frame" x="137.5" y="276" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="aeH-nP-mu6"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Py-AB-2A9">
+                                <rect key="frame" x="137.5" y="236" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="fTK-vd-oy7"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QXg-cR-ENr">
+                                <rect key="frame" x="163" y="195" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Vul-HJ-I2X" firstAttribute="top" secondItem="p0N-HR-1cP" secondAttribute="bottom" constant="10" id="30a-1C-4Ic"/>
+                            <constraint firstItem="QXg-cR-ENr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7AG-lO-e5D"/>
                             <constraint firstItem="Vul-HJ-I2X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FDI-oJ-MxQ"/>
                             <constraint firstItem="Vul-HJ-I2X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="K8Z-Mb-8GT"/>
+                            <constraint firstItem="p0N-HR-1cP" firstAttribute="top" secondItem="3Py-AB-2A9" secondAttribute="bottom" constant="10" id="KJR-J8-kBf"/>
+                            <constraint firstItem="3Py-AB-2A9" firstAttribute="top" secondItem="QXg-cR-ENr" secondAttribute="bottom" constant="10" id="Lee-S1-Pmv"/>
+                            <constraint firstItem="p0N-HR-1cP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SKJ-ty-RQe"/>
                             <constraint firstItem="yWy-tn-J5d" firstAttribute="top" secondItem="Vul-HJ-I2X" secondAttribute="bottom" constant="10" id="sTd-pM-Yvw"/>
+                            <constraint firstItem="3Py-AB-2A9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="spn-cC-ufw"/>
                             <constraint firstItem="yWy-tn-J5d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vZM-Jn-YcV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="additionSwitch" destination="QXg-cR-ENr" id="Mxd-aY-Ihe"/>
+                        <outlet property="bottomTextField" destination="p0N-HR-1cP" id="UFK-ep-VWi"/>
                         <outlet property="myLabel" destination="Vul-HJ-I2X" id="oiU-we-df3"/>
+                        <outlet property="topTextField" destination="3Py-AB-2A9" id="VfN-AS-Kte"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
